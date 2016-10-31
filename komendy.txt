@@ -1,0 +1,23 @@
+python3 -m venv NAZWA
+source NAZWA/bin/activate
+deactivate
+
+pip install django
+
+# tworzy strukturę plików i katalogów
+django-admin startproject MYSITE .
+
+# pierwsza migracja tworzy bazę danych
+python manage.py migrate
+
+python manage.py runserver
+
+# tworzy aplikację
+python manage.py startapp BLOG
+# potem dodaj do MYSITE/settings.py do INSTALLED_APPS 'BLOG'
+
+# po zakodzeniu modelu
+python manage.py makemigrations BLOG
+python manage.py migrate BLOG
+
+python manage.py createsuperuser

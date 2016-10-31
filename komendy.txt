@@ -24,3 +24,9 @@ python manage.py createsuperuser
 
 # wywal użyty port
 sudo fuser -k 8000/tcp
+
+# 
+python manage.py collectstatic
+
+# konsola z django
+python manage.py shell
